@@ -55,12 +55,12 @@ class Umobj < Formula
   end
 
   test do
-    system "#{bin}/lsobj", "--help"
-    system "#{bin}/mkobj", "--help"
-    system "#{bin}/cpobj", "--help"
-    system "#{bin}/rmobj", "--help"
-    system "#{bin}/chobj", "--help"
-    system "#{bin}/catobj", "--help"
-    system "#{bin}/syncobj", "--help"
+    system "#{bin}/lsobj", "--version"
+    system "#{bin}/mkobj", "--version"
+    system "#{bin}/cpobj", "--version"
+    system "#{bin}/rmobj", "--version"
+    system "#{bin}/chobj", "--version"
+    system "#{bin}/catobj", "--version"
+    system "#{bin}/syncobj", "--version"
   end
 end
