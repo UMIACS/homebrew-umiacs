@@ -6,8 +6,6 @@ to host [UMIACS](http://www.umiacs.umd.edu) packages that do not meet the
 [Acceptable Formulae](https://github.com/Homebrew/homebrew/blob/master/share/doc/homebrew/Acceptable-Formulae.md)
 specification.
 
-<!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc/generate-toc again -->
-
 **Table of Contents**
 
 - [UMIACS Homebrew Tap](#umiacs-homebrew-tap)
@@ -15,8 +13,6 @@ specification.
     - [Why?](#why)
     - [Contributing Formulae](#contributing-formulae)
     - [Formulae on GitHub](#formulae-on-github)
-
-<!-- markdown-toc end -->
 
 
 ## Quick Start
