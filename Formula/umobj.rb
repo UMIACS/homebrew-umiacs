@@ -6,6 +6,12 @@ class Umobj < Formula
 
   head "https://github.com/UMIACS/umobj.git"
 
+  bottle do
+    root_url" https://obj.umiacs.umd.edu/homebrew-umiacs-bottles/"
+    cellar :any
+    sha256 "233e59c04e0363379111d3e054c0914dbaf224cb49135c8e3b546c389ec8c07e" => :yosemite
+  end
+
   depends_on :python if MacOS.version <= :snow_leopard
 
   resource "netaddr" do
