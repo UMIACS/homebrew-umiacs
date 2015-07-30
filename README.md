@@ -21,15 +21,19 @@ Once [Homebrew](http://brew.sh) is installed,
 ```bash
 brew tap ibeekman/homebrew-umiacs
 git@gitlab.umiacs.umd.edu:ibeekman/homebrew-umiacs.git
-``` to add the
+```
+to add the
 UMIACS tap to your Homebrew. If you no longer  want to get updated
 UMIACS tap formulae:
+
 ```bash
 brew untap ibeekman/homebrew-umiacs
 ```
+
 Please
 note that this will not remove any installed packages. To accomplish
 that you should run
+
 ```bash
 brew rm <package_name>
 ```
