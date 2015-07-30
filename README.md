@@ -4,7 +4,7 @@ A [Homebrew](http://brew.sh)
 [Tap](https://github.com/Homebrew/homebrew/blob/master/share/doc/homebrew/brew-tap.md)
 to host [UMIACS](http://www.umiacs.umd.edu) packages that do not meet the
 [Acceptable Formulae](https://github.com/Homebrew/homebrew/blob/master/share/doc/homebrew/Acceptable-Formulae.md)
-specification.
+specification due to project age on Github or popularity.
 
 **Table of Contents**
 
