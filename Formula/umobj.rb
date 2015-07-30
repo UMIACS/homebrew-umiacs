@@ -1,10 +1,10 @@
 class Umobj < Formula
   desc "Command-line utilties for S3-compatible Object Storage"
-  homepage "https://github.com/UMIACS/umobj"
+  homepage "https://gitlab.umiacs.umd.edu/staff/umobj"
   url "https://pypi.python.org/packages/source/u/umobj/umobj-1.3.0.tar.gz"
   sha256 "af564b5b9ef741ae10b9a8d7bb6b6f383be73ddcc5bef5de41ad9e6dc2fb5a0b"
 
-  head "https://github.com/UMIACS/umobj.git"
+  head "https://gitlab.umiacs.umd.edu/staff/umobj.git"
 
   bottle do
     root_url "https://obj.umiacs.umd.edu/homebrew-umiacs-bottles"
