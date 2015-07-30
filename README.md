@@ -19,8 +19,7 @@ specification.
 
 Once [Homebrew](http://brew.sh) is installed,
 ```bash
-brew tap ibeekman/homebrew-umiacs
-git@gitlab.umiacs.umd.edu:ibeekman/homebrew-umiacs.git
+brew tap ibeekman/homebrew-umiacs git@gitlab.umiacs.umd.edu:ibeekman/homebrew-umiacs.git
 ```
 to add the
 UMIACS tap to your Homebrew. If you no longer  want to get updated
@@ -43,7 +42,10 @@ formula name with `ibeekman/umiacs`. For example, to install UMObj
 [command line tools](https://gitlab.umiacs.umd.edu/staff/umobj/tree/master)
 for working with
 [UMIACS object store](https://obj.umiacs.umd.edu/obj/help) buckets,
-run `brew install ibeekman/umiacs/umobj`.
+run
+```bash
+brew install ibeekman/umiacs/umobj
+```
 
 After the UMIACS tap has been added, running `brew update` will fetch
 any new or outdated formulae from the UMIACS tap, along with the
@@ -62,7 +64,11 @@ Because most UMIACS projects are probably hosted on
 [UMIACS GitLab](https://wiki.umiacs.umd.edu/umiacs/index.php/GitLab)
 and only *mirrored* (at best) on [GitHub](https://github.com), it is
 unlikely that they will garner the number of stars, watchers and forks
-required by `brew audit --strict --online <formula-name>`. Without
+required by
+```bash
+brew audit --strict --online <formula-name>
+```
+Without
 passing this automated "popularity contest" the very busy Homebrew
 maintainers would need some other compelling argument to make an
 exception and let the package in.
@@ -98,7 +104,11 @@ start by
 [forking this repository](https://gitlab.umiacs.umd.edu/ibeekman/homebrew-umiacs/fork/new)
 (UMIACS users/staff only). To get up and running you can use the `brew
 create` command after learning about it from the Homebrew
-documentation.  `brew create  <URL>` creates a Formula stub which is
+documentation.
+```bash
+brew create  <URL>
+```
+creates a Formula stub which is
 mostly accurate from the package download URL on github. If the
 package is python based, it is only a candidate for a Homebrew formula
 if it is a program/app/executable. Libraries and Frameworks should be
@@ -106,15 +116,24 @@ put up on
 [PyPi](https://python-packaging-user-guide.readthedocs.org/en/latest/)
 instead. If the formula being added is for a Python package, please
 start by creating a PyPi package, installing the latest version of the
-package (from PyPi via `pip install --upgrade <package_name>`)and then
-use
+package--from PyPi via:
+```bash
+pip install --upgrade <package_name>
+```
+and then use
 [homebrew_python_poet](https://github.com/tdsmith/homebrew-pypi-poet/blob/master/poet/poet.py)
 to create a Homebrew formula stub. PyPi-Poet is
 [available on PyPi](https://pypi.python.org/pypi/homebrew-pypi-poet/0.5.0)
-and can easily be installed with `pip install --upgrade
-homebrew_pypi_poet`. Once both PyPi-poet and your formula are
-installed using `pip`, run `poet -f <your_formula_name> >
-<your_formula_name.rb>` to create a Homebrew formula stub for a Python
+and can easily be installed with
+```bash
+pip install --upgrade homebrew_pypi_poet
+```
+Once both PyPi-poet and your formula are
+installed using `pip`, run
+```bash
+poet -f <your_formula_name> > <your_formula_name.rb>
+```
+to create a Homebrew formula stub for a Python
 app. For more info on Homebrew and Python, read [Homebrew's
 documentation of the subject](https://github.com/Homebrew/homebrew/blob/master/share/doc/homebrew/Python-for-Formula-Authors.md).
 
