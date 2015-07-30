@@ -18,12 +18,21 @@ specification.
 ## Quick Start
 
 Once [Homebrew](http://brew.sh) is installed,
-`brew tap ibeekman/homebrew-umiacs
-git@gitlab.umiacs.umd.edu:ibeekman/homebrew-umiacs.git` to add the
+```bash
+brew tap ibeekman/homebrew-umiacs
+git@gitlab.umiacs.umd.edu:ibeekman/homebrew-umiacs.git
+``` to add the
 UMIACS tap to your Homebrew. If you no longer  want to get updated
-UMIACS tap formulae: `brew untap ibeekman/homebrew-umiacs`. Please
+UMIACS tap formulae:
+```bash
+brew untap ibeekman/homebrew-umiacs
+```
+Please
 note that this will not remove any installed packages. To accomplish
-that you should run `brew rm <package_name>`.
+that you should run
+```bash
+brew rm <package_name>
+```
 
 When ready to install a formula from the UMIACS tap, prepend the
 formula name with `ibeekman/umiacs`. For example, to install UMObj
