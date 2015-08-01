@@ -112,7 +112,7 @@ start by
 create` command after learning about it from the Homebrew
 documentation.
 ```bash
-brew create  <URL>
+brew create  $URL
 ```
 creates a Formula stub which is
 mostly accurate from the package download URL on GitHub. If the
@@ -124,7 +124,7 @@ instead. If the formula being added is for a Python package, please
 start by creating a PyPi package, installing the latest version of the
 package--from PyPi--via:
 ```bash
-pip install --upgrade <package_name>
+pip install --upgrade $PACKAGE_NAME
 ```
 and then use
 [homebrew_python_poet](https://github.com/tdsmith/homebrew-pypi-poet/blob/master/poet/poet.py)
@@ -137,7 +137,7 @@ pip install --upgrade homebrew_pypi_poet
 Once both PyPi-poet and your formula are
 installed using `pip`, run
 ```bash
-poet -f <your_formula_name> > <your_formula_name.rb>
+poet -f $YOUR_FORMULA_NAME > $YOUR_FORMULA_NAME.rb
 ```
 to create a Homebrew formula stub for a Python
 app. For more info on Homebrew and Python, read [Homebrew's
