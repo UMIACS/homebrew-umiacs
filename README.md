@@ -4,8 +4,9 @@ A [Homebrew](http://brew.sh)
 [Tap](https://github.com/Homebrew/homebrew/blob/master/share/doc/homebrew/brew-tap.md)
 to host [UMIACS](http://www.umiacs.umd.edu) packages that do not meet the
 [Acceptable Formulae](https://github.com/Homebrew/homebrew/blob/master/share/doc/homebrew/Acceptable-Formulae.md)
-specification due to project age on Github or popularity.
+specification due to project age on GitHub or popularity.
 
+<!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc/generate-toc again -->
 **Table of Contents**
 
 - [UMIACS Homebrew Tap](#umiacs-homebrew-tap)
@@ -13,20 +14,23 @@ specification due to project age on Github or popularity.
     - [Why?](#why)
     - [Contributing Formulae](#contributing-formulae)
     - [Formulae on GitHub](#formulae-on-github)
+    - [Formulae only on GitLab](#formulae-only-on-gitlab)
+
+<!-- markdown-toc end -->
+
 
 
 ## Quick Start
 
 Once [Homebrew](http://brew.sh) is installed,
 ```bash
-brew tap ibeekman/homebrew-umiacs git@gitlab.umiacs.umd.edu:ibeekman/homebrew-umiacs.git
+brew tap UMIACS/umiacs
 ```
-to add the
-UMIACS tap to your Homebrew. If you no longer  want to get updated
-UMIACS tap formulae:
+to add the UMIACS tap to your Homebrew. If you no longer  want to get
+updated UMIACS tap formulae:
 
 ```bash
-brew untap ibeekman/homebrew-umiacs
+brew untap UMIACS/umiacs
 ```
 
 Please
@@ -34,18 +38,21 @@ note that this will not remove any installed packages. To accomplish
 that you should run
 
 ```bash
-brew rm <package_name>
+brew rm $PACKAGE_NAME
 ```
 
 When ready to install a formula from the UMIACS tap, prepend the
-formula name with `ibeekman/umiacs`. For example, to install UMObj
+formula name with `UMIACS/umiacs`. For example, to install UMObj
 [command line tools](https://gitlab.umiacs.umd.edu/staff/umobj/tree/master)
 for working with
 [UMIACS object store](https://obj.umiacs.umd.edu/obj/help) buckets,
 run
 ```bash
-brew install ibeekman/umiacs/umobj
+brew install UMIACS/umiacs/umobj
 ```
+
+If the formula only exists in the UMIACS tap, as is the case for
+UMObj, then `brew install umobj` will suffice.
 
 After the UMIACS tap has been added, running `brew update` will fetch
 any new or outdated formulae from the UMIACS tap, along with the
@@ -66,12 +73,11 @@ and only *mirrored* (at best) on [GitHub](https://github.com), it is
 unlikely that they will garner the number of stars, watchers and forks
 required by
 ```bash
-brew audit --strict --online <formula-name>
+brew audit --strict --online $PACKAGE_NAME
 ```
-Without
-passing this automated "popularity contest" the very busy Homebrew
-maintainers would need some other compelling argument to make an
-exception and let the package in.
+Without passing this automated "popularity contest" the very busy
+Homebrew maintainers would need some other compelling argument to make
+an exception and let the package in.
 
 However, tools that are useful to others outside of UMIACS are good
 candidates to be added to the
@@ -109,14 +115,14 @@ documentation.
 brew create  <URL>
 ```
 creates a Formula stub which is
-mostly accurate from the package download URL on github. If the
+mostly accurate from the package download URL on GitHub. If the
 package is python based, it is only a candidate for a Homebrew formula
 if it is a program/app/executable. Libraries and Frameworks should be
 put up on
 [PyPi](https://python-packaging-user-guide.readthedocs.org/en/latest/)
 instead. If the formula being added is for a Python package, please
 start by creating a PyPi package, installing the latest version of the
-package--from PyPi via:
+package--from PyPi--via:
 ```bash
 pip install --upgrade <package_name>
 ```
@@ -137,7 +143,7 @@ to create a Homebrew formula stub for a Python
 app. For more info on Homebrew and Python, read [Homebrew's
 documentation of the subject](https://github.com/Homebrew/homebrew/blob/master/share/doc/homebrew/Python-for-Formula-Authors.md).
 
-## Formulae on Github
+## Formulae on GitHub
 
  1. [UMObj](https://gitlab.umiacs.umd.edu/staff/umobj/tree/master) |
     [GitHub page](https://github.com/UMIACS/umobj)
