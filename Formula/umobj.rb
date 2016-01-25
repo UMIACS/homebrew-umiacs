@@ -1,15 +1,15 @@
 class Umobj < Formula
   desc "Command-line utilties for S3-compatible Object Storage"
   homepage "https://gitlab.umiacs.umd.edu/staff/umobj"
-  url "https://pypi.python.org/packages/source/u/umobj/umobj-1.3.0.tar.gz"
-  sha256 "af564b5b9ef741ae10b9a8d7bb6b6f383be73ddcc5bef5de41ad9e6dc2fb5a0b"
+  url "https://pypi.python.org/packages/source/u/umobj/umobj-1.3.4.tar.gz"
+  sha256 "62dd2737a4aec3b42ee6f1d423449b9d5aba02d0a36c91bb944616a986158a2c"
 
   head "https://gitlab.umiacs.umd.edu/staff/umobj.git"
 
   bottle do
     root_url "https://obj.umiacs.umd.edu/homebrew-umiacs-bottles"
-    cellar :any
-    sha256 "9892e1059f9428c76118e3686f580a39c7d01216cad1831c23b62ebe40b21e94" => :yosemite
+      cellar :any_skip_relocation
+    sha256 "52b2bab374ad84f6a9a7694190d1a631d830945ce5e408bad08ddf98d67eadca" => :yosemite
   end
 
   depends_on :python if MacOS.version <= :snow_leopard
